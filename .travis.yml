@@ -6,6 +6,8 @@ python:
 install:
   - wget https://releases.hashicorp.com/vagrant/1.8.0/vagrant_1.8.0_x86_64.deb
   - sudo dpkg -i vagrant_1.8.0_x86_64.deb
+  -  gem install nokogiri
+  - vagrant plugin install pkg-config
   - vagrant plugin install vagrant-libvirt
   - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
