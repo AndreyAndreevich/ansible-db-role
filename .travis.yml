@@ -4,14 +4,11 @@ language: python
 python:
   - '2.7'
 install:
-  - sudo sed -i'' "s/Specification.all = nil/Specification.reset/" /usr/lib/ruby/vendor_ruby/vagrant/bundler.rb
-  - sudo gem install bundler --version ">= 1.12.5"
   - wget https://releases.hashicorp.com/vagrant/1.8.0/vagrant_1.8.0_x86_64.deb
   - sudo dpkg -i vagrant_1.8.0_x86_64.deb
-  -  gem install nokogiri
-  - vagrant plugin install pkg-config
   - vagrant plugin install vagrant-libvirt
   - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
 script:
   - molecule test
+  
