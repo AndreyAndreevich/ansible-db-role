@@ -4,7 +4,9 @@ language: python
 python:
   - '2.7'
 install:
-  - sudo apt-get install -y libvirt vagrant
+  - sudo apt-get install -y vagrant
+  - vagrant plugin install vagrant-libvirt
+  - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
 script:
   - molecule test
