@@ -5,6 +5,8 @@ python:
   - '2.7'
 install:
   - sudo apt-get install -y vagrant
+  - gem install nokogiri
+  - vagrant plugin install pkg-config
   - vagrant plugin install vagrant-libvirt
   - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
