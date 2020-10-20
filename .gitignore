@@ -1,5 +1,6 @@
 # Ide
 .vscode
+.env
 
 # ansible
 *.retry
