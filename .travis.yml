@@ -4,6 +4,8 @@ language: python
 python:
   - '2.7'
 install:
+  - sudo apt-get update
+  - sudo apt-get install -y ruby-full ruby-bundler build-essential
   - wget https://releases.hashicorp.com/vagrant/1.8.0/vagrant_1.8.0_x86_64.deb
   - sudo dpkg -i vagrant_1.8.0_x86_64.deb
   - gem install ffi -v '1.13.1'
