@@ -4,6 +4,7 @@ language: python
 python:
   - '2.7'
 install:
+  - sudo apt-get install -y libvirt-dev
   - wget https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
   - sudo dpkg -i vagrant_2.2.10_x86_64.deb
   - sudo vagrant plugin install vagrant-libvirt
