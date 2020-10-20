@@ -7,8 +7,8 @@ install:
   - sudo apt-get install -y libvirt-dev
   - wget https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
   - sudo dpkg -i vagrant_2.2.10_x86_64.deb
-  - sudo vagrant plugin install vagrant-libvirt
-  - sudo chmod 777 /home/travis/.vagrant.d
+  - vagrant plugin install vagrant-libvirt
+  #- sudo chmod -R 755 /home/travis/.vagrant.d
   - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
 script:
