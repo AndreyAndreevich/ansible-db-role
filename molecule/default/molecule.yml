@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: vagrant
 platforms:
   - name: instance
     box: ubuntu/xenial64
