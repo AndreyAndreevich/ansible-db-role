@@ -2,10 +2,11 @@
 sudo: required
 language: python
 python:
-  - '3.6'
+  - 2.7'
 install:
   - wget https://releases.hashicorp.com/vagrant/1.8.0/vagrant_1.8.0_x86_64.deb
   - sudo dpkg -i vagrant_1.8.0_x86_64.deb
+  - gem install ffi -v '1.13.1'
   - vagrant plugin install vagrant-libvirt
   - vagrant box add generic/ubuntu1604 --provider=libvirt
   - pip install -r requirements.txt
